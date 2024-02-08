@@ -1,13 +1,16 @@
-export const Highlight = ({children, color, test}) => (
+export const Highlight = (props) => (
+<>
   <span
     style={{
-      backgroundColor: color,
+      backgroundColor: props.color,
       borderRadius: '2px',
       color: '#fff',
       padding: '0.2rem',
     }}>
-    {test}
+    {props.children}
   </span>
+{props.test}
+</>
 );
 
-<Highlight color="#005A9C">Dodger Blue</Highlight> is my favorite color.
+<Highlight color="#005A9C" >Dodger Blue</Highlight> is my favorite color.
